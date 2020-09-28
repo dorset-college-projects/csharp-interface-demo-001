@@ -5,7 +5,7 @@ using System.Text;
 
 namespace InterfaceDemoGameItems.Models
 {
-    class Sword : IItem, IDamageable
+    class Sword : IItem, IDamageable, IPartOfQuest
     {
         public Sword(string _name )
         {
@@ -35,6 +35,10 @@ namespace InterfaceDemoGameItems.Models
         }
 
        
+        public void TurnIn()
+        {
+            Console.WriteLine($"{name} is being turned in as part of quest");
 
+        }
     }
 }
